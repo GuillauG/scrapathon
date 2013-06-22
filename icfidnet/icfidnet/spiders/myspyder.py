@@ -42,7 +42,7 @@ class MyspyderSpider(CrawlSpider):
 		mandat_rows = hxs.select("/html/body/table[5]/tr")
 		mandats = [ self.mandat(mrow) for idx, mrow in enumerate(mandat_rows) ]
 
-		return mandats
+		return mandats[1:]
 
 
 	def parse_member(self, response):
